@@ -11,7 +11,7 @@ copyright = '2024, Ty Rawls'
 author = 'Ty Rawls'
 
 # The full version, including alpha/beta/rc tags
-# release = 'v1.0.0'
+release = 'v0.0.1'
 
 
 # -- General configuration ---------------------------------------------------
@@ -21,7 +21,7 @@ extensions = []
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
-
+extensions = ['sphinx.ext.autosectionlabel', 'sphinx_copybutton', 'sphinx.ext.todo']
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -45,5 +45,5 @@ html_theme_options = {
         },
     ],
 
-     "announcement": "<em>Important</em>: This setup is for MAC OS ONLY. Support for Windows OS coming soon!",
+     "announcement": "<em>Important</em>: Documentation for this project is still under development",
 }
