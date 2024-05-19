@@ -1,0 +1,10 @@
+# root folder
+.DS_Store
+.venv
+.vscode
+
+# docs folder
+docs/_static
+docs/.DS_Store
+docs/_templates
+docs/imag/
