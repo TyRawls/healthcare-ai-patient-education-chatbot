@@ -6,3 +6,11 @@ fosters informed decision-making and encourages active participation in healthca
 health outcomes, and reduced healthcare costs. Additionally, patient education promotes patient autonomy and self-care, ultimately enhancing 
 overall patient satisfaction and quality of life. Moreover, healthcare providers benefit from reduced patient visits, enhanced communication, 
 and strengthened patient-provider relationships, resulting in more efficient healthcare delivery and improved patient care experiences.
+
+
+.. figure:: img/ai_chatbot_data_architecture.png
+   :width: 800   
+   :alt: This is an image
+
+   ETL architecture for ingesting health-related data, performing transformations, and storing it in a vector database for reference by an AI 
+   chatbot utilizing Retrieval-Augmented Generation (RAG).
