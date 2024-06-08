@@ -323,13 +323,17 @@ constraints for vector embedding. The processed data was then staged in another 
 <a class="reference external" href="https://docs.voyageai.com/docs/embeddings">Voyage AI API</a> (voyage-large-2 model). These embeddings were then
 stored in <a class="reference external" href="https://docs.pinecone.io/home">Pinecone</a>, a vector database.</p>
 </section>
+<section id="chatbot-deployment">
+<h3>Chatbot Deployment<a class="headerlink" href="#chatbot-deployment" title="Link to this heading">¶</a></h3>
+<p>For a simple and cost-effective deployment, A.M.Y.T.H.E.S.T. was implemented using Streamlit.</p>
 <section id="data-privacy-security">
-<h3>Data Privacy &amp; Security<a class="headerlink" href="#data-privacy-security" title="Link to this heading">¶</a></h3>
+<h4>Data Privacy &amp; Security<a class="headerlink" href="#data-privacy-security" title="Link to this heading">¶</a></h4>
 <p>To ensure data privacy and security, a process was implemented to eliminate highly confidential (C4) data. This
 category includes the most sensitive information, whose unauthorized disclosure could result in severe legal, financial,
 or security repercussions.</p>
 <p>Prior to storing the chatbot history in an S3 bucket, names, dates of birth, locations, and phone numbers were removed
 through a process called desensitization using an Amazon Lambda function.</p>
+</section>
 </section>
 </section>
 </section>
@@ -399,7 +403,10 @@ through a process called desensitization using an Amazon Lambda function.</p>
 <li><a class="reference internal" href="#data-extraction">Data Extraction</a></li>
 <li><a class="reference internal" href="#data-transformation">Data Transformation</a></li>
 <li><a class="reference internal" href="#data-loading">Data Loading</a></li>
+<li><a class="reference internal" href="#chatbot-deployment">Chatbot Deployment</a><ul>
 <li><a class="reference internal" href="#data-privacy-security">Data Privacy &amp; Security</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

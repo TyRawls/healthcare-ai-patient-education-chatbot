@@ -60,8 +60,12 @@ Another Amazon Lambda function was utilized to process the staged data in S3 int
 `Voyage AI API <https://docs.voyageai.com/docs/embeddings>`_ (voyage-large-2 model). These embeddings were then 
 stored in `Pinecone <https://docs.pinecone.io/home>`_, a vector database.
 
+Chatbot Deployment
+------------------
+For a simple and cost-effective deployment, A.M.Y.T.H.E.S.T. was implemented using Streamlit.
+
 Data Privacy & Security
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 To ensure data privacy and security, a process was implemented to eliminate highly confidential (C4) data. This 
 category includes the most sensitive information, whose unauthorized disclosure could result in severe legal, financial, 
 or security repercussions.
