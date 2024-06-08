@@ -50,3 +50,4 @@ with Amazon S3, the raw data was subsequently stored in an Amazon S3 bucket as a
 preprocessing purposes.
 
 
+A.M.Y.T.H.E.S.T. stands for Artificial Messaging Yielding Thoughtful Human-like Engagement Systems Technology.
