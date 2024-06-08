@@ -282,9 +282,9 @@ which results in many patients receiving inadequate information about their heal
 <section id="inclusions">
 <h3>Inclusions<a class="headerlink" href="#inclusions" title="Link to this heading">¶</a></h3>
 <ul class="simple">
-<li><p>Develop an AI Chatbot: Create an AI-driven chatbot to deliver high-quality health education materials.</p></li>
-<li><p>Enhance Health Literacy: Improve patient understanding of health information to promote better health management.</p></li>
-<li><p>Improve Treatment Adherence: Increase compliance with treatment plans by providing clear and accessible health information.</p></li>
+<li><p><strong>Develop an AI Chatbot:</strong> Create an AI-driven chatbot to deliver high-quality health education materials.</p></li>
+<li><p><strong>Enhance Health Literacy:</strong> Improve patient understanding of health information to promote better health management.</p></li>
+<li><p><strong>Improve Treatment Adherence:</strong> Increase compliance with treatment plans by providing clear and accessible health information.</p></li>
 </ul>
 </section>
 <section id="exclusions">
@@ -297,6 +297,7 @@ which results in many patients receiving inadequate information about their heal
 </section>
 <section id="technical-details">
 <h2>Technical Details<a class="headerlink" href="#technical-details" title="Link to this heading">¶</a></h2>
+<p>A.M.Y.T.H.E.S.T. stands for <strong>Artificial Messaging Yielding Thoughtful Human-like Engagement Systems Technology</strong>.</p>
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="_images/ai_chatbot_data_architecture.png"><img alt="This is an image" src="_images/ai_chatbot_data_architecture.png" style="width: 800px;" />
 </a>
@@ -311,7 +312,25 @@ chatbot utilizing Retrieval-Augmented Generation (RAG).</span><a class="headerli
 <a class="reference external" href="https://boto3.amazonaws.com/v1/documentation/api/latest/index.html">Boto3</a>, a Python library for interfacing
 with Amazon S3, the raw data was subsequently stored in an Amazon S3 bucket as a text file (.txt) for
 preprocessing purposes.</p>
-<p>A.M.Y.T.H.E.S.T. stands for Artificial Messaging Yielding Thoughtful Human-like Engagement Systems Technology.</p>
+</section>
+<section id="data-transformation">
+<h3>Data Transformation<a class="headerlink" href="#data-transformation" title="Link to this heading">¶</a></h3>
+<p>An Amazon Lambda function was used to preprocess the raw data in S3 into smaller chunks, ensuring it met the token
+constraints for vector embedding. The processed data was then staged in another S3 bucket.</p>
+</section>
+<section id="data-loading">
+<h3>Data Loading<a class="headerlink" href="#data-loading" title="Link to this heading">¶</a></h3>
+<p>Another Amazon Lambda function was utilized to process the staged data in S3 into vector embeddings using the
+<a class="reference external" href="https://docs.voyageai.com/docs/introduction">Voyage AI API</a> (voyage-large-2 model). These embeddings were then
+stored in <a class="reference external" href="https://docs.pinecone.io/home">Pinecone</a>, a vector database.</p>
+</section>
+<section id="data-privacy-security">
+<h3>Data Privacy &amp; Security<a class="headerlink" href="#data-privacy-security" title="Link to this heading">¶</a></h3>
+<p>To ensure data privacy and security, a process was implemented to eliminate highly confidential (C4) data. This
+category includes the most sensitive information, whose unauthorized disclosure could result in severe legal, financial,
+or security repercussions.</p>
+<p>Prior to storing the chatbot history in an S3 bucket, names, dates of birth, locations, and phone numbers were removed
+through a process called desensitization using an Amazon Lambda function.</p>
 </section>
 </section>
 </section>
@@ -379,6 +398,9 @@ preprocessing purposes.</p>
 </li>
 <li><a class="reference internal" href="#technical-details">Technical Details</a><ul>
 <li><a class="reference internal" href="#data-extraction">Data Extraction</a></li>
+<li><a class="reference internal" href="#data-transformation">Data Transformation</a></li>
+<li><a class="reference internal" href="#data-loading">Data Loading</a></li>
+<li><a class="reference internal" href="#data-privacy-security">Data Privacy &amp; Security</a></li>
 </ul>
 </li>
 </ul>

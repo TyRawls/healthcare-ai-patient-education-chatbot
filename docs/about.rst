@@ -22,9 +22,9 @@ Project Goals & Non-goals
 
 Inclusions
 ----------
-* Develop an AI Chatbot: Create an AI-driven chatbot to deliver high-quality health education materials.
-* Enhance Health Literacy: Improve patient understanding of health information to promote better health management.
-* Improve Treatment Adherence: Increase compliance with treatment plans by providing clear and accessible health information.
+* **Develop an AI Chatbot:** Create an AI-driven chatbot to deliver high-quality health education materials.
+* **Enhance Health Literacy:** Improve patient understanding of health information to promote better health management.
+* **Improve Treatment Adherence:** Increase compliance with treatment plans by providing clear and accessible health information.
 
 Exclusions
 ----------
@@ -34,6 +34,7 @@ Exclusions
 #################
 Technical Details
 #################
+A.M.Y.T.H.E.S.T. stands for **Artificial Messaging Yielding Thoughtful Human-like Engagement Systems Technology**.
 
 .. figure:: img/ai_chatbot_data_architecture.png
    :width: 800   
@@ -49,5 +50,22 @@ Health-related data was extracted from `MedlinePlus <https://medlineplus.gov/>`_
 with Amazon S3, the raw data was subsequently stored in an Amazon S3 bucket as a text file (.txt) for 
 preprocessing purposes.
 
+Data Transformation
+-------------------
+An Amazon Lambda function was used to preprocess the raw data in S3 into smaller chunks, ensuring it met the token 
+constraints for vector embedding. The processed data was then staged in another S3 bucket.
 
-A.M.Y.T.H.E.S.T. stands for Artificial Messaging Yielding Thoughtful Human-like Engagement Systems Technology.
+Data Loading
+------------
+Another Amazon Lambda function was utilized to process the staged data in S3 into vector embeddings using the 
+`Voyage AI API <https://docs.voyageai.com/docs/introduction>`_ (voyage-large-2 model). These embeddings were then 
+stored in `Pinecone <https://docs.pinecone.io/home>`_, a vector database.
+
+Data Privacy & Security
+-----------------------
+To ensure data privacy and security, a process was implemented to eliminate highly confidential (C4) data. This 
+category includes the most sensitive information, whose unauthorized disclosure could result in severe legal, financial, 
+or security repercussions.
+
+Prior to storing the chatbot history in an S3 bucket, names, dates of birth, locations, and phone numbers were removed 
+through a process called desensitization using an Amazon Lambda function.
