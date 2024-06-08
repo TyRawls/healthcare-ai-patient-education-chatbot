@@ -196,7 +196,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -253,7 +253,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -267,6 +267,33 @@ fosters informed decision-making and encourages active participation in healthca
 health outcomes, and reduced healthcare costs. Additionally, patient education promotes patient autonomy and self-care, ultimately enhancing
 overall patient satisfaction and quality of life. Moreover, healthcare providers benefit from reduced patient visits, enhanced communication,
 and strengthened patient-provider relationships, resulting in more efficient healthcare delivery and improved patient care experiences.</p>
+<section id="problem-statement">
+<h2>Problem Statement<a class="headerlink" href="#problem-statement" title="Link to this heading">¶</a></h2>
+<p>Low health literacy among patients poses a significant challenge, as it impedes their ability to comprehend medical information, follow instructions,
+and recognize the importance of their treatments. This difficulty in understanding can severely limit their capacity to manage their health effectively.
+Additionally, healthcare professionals often face time constraints during appointments, preventing them from delivering thorough patient education,
+which results in many patients receiving inadequate information about their health.</p>
+</section>
+<section id="project-goals-non-goals">
+<h2>Project Goals &amp; Non-goals<a class="headerlink" href="#project-goals-non-goals" title="Link to this heading">¶</a></h2>
+<section id="inclusions">
+<h3>Inclusions<a class="headerlink" href="#inclusions" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Develop an AI Chatbot: Create an AI-driven chatbot to deliver high-quality health education materials.</p></li>
+<li><p>Enhance Health Literacy: Improve patient understanding of health information to promote better health management.</p></li>
+<li><p>Improve Treatment Adherence: Increase compliance with treatment plans by providing clear and accessible health information.</p></li>
+</ul>
+</section>
+<section id="exclusions">
+<h3>Exclusions<a class="headerlink" href="#exclusions" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Not Focused on Reducing Healthcare Costs: Although well-informed patients who effectively manage their conditions are less likely to need emergency care or frequent hospitalizations, the primary aim of this project is not to reduce healthcare costs.</p></li>
+<li><p>Not Intended to Alleviate Provider Workload: This project does not seek to replace healthcare providers or diminish their workload. Instead, it is designed to serve as an educational resource to supplement patient knowledge.</p></li>
+</ul>
+</section>
+</section>
+<section id="technical-details">
+<h2>Technical Details<a class="headerlink" href="#technical-details" title="Link to this heading">¶</a></h2>
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="_images/ai_chatbot_data_architecture.png"><img alt="This is an image" src="_images/ai_chatbot_data_architecture.png" style="width: 800px;" />
 </a>
@@ -275,6 +302,14 @@ and strengthened patient-provider relationships, resulting in more efficient hea
 chatbot utilizing Retrieval-Augmented Generation (RAG).</span><a class="headerlink" href="#id1" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
+<section id="data-extraction">
+<h3>Data Extraction<a class="headerlink" href="#data-extraction" title="Link to this heading">¶</a></h3>
+<p>Health-related data was extracted from <a class="reference external" href="https://medlineplus.gov/">MedlinePlus</a> using Python. Utilizing
+<cite>Boto3 &lt;https://boto3.amazonaws.com/v1/documentation/api/latest/index.html_&gt;</cite>, a Python library for interfacing
+with Amazon S3, the raw data was subsequently stored in an Amazon S3 bucket as a text file (.txt) for
+preprocessing purposes.</p>
+</section>
+</section>
 </section>
 
         </article>
@@ -319,8 +354,36 @@ chatbot utilizing Retrieval-Augmented Generation (RAG).</span><a class="headerli
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">About</a><ul>
+<li><a class="reference internal" href="#problem-statement">Problem Statement</a></li>
+<li><a class="reference internal" href="#project-goals-non-goals">Project Goals &amp; Non-goals</a><ul>
+<li><a class="reference internal" href="#inclusions">Inclusions</a></li>
+<li><a class="reference internal" href="#exclusions">Exclusions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#technical-details">Technical Details</a><ul>
+<li><a class="reference internal" href="#data-extraction">Data Extraction</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
