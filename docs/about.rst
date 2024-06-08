@@ -45,7 +45,7 @@ Technical Details
 Data Extraction
 ---------------
 Health-related data was extracted from `MedlinePlus <https://medlineplus.gov/>`_ using Python. Utilizing 
-`Boto3 <https://boto3.amazonaws.com/v1/documentation/api/latest/index.html_>`, a Python library for interfacing 
+`Boto3 <https://boto3.amazonaws.com/v1/documentation/api/latest/index.html>`_, a Python library for interfacing 
 with Amazon S3, the raw data was subsequently stored in an Amazon S3 bucket as a text file (.txt) for 
 preprocessing purposes.
 
