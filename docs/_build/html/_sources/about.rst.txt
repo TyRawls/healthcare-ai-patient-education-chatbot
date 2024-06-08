@@ -57,7 +57,7 @@ constraints for vector embedding. The processed data was then staged in another 
 Data Loading
 ------------
 Another Amazon Lambda function was utilized to process the staged data in S3 into vector embeddings using the 
-`Voyage AI API <https://docs.voyageai.com/docs/introduction>`_ (voyage-large-2 model). These embeddings were then 
+`Voyage AI API <https://docs.voyageai.com/docs/embeddings>`_ (voyage-large-2 model). These embeddings were then 
 stored in `Pinecone <https://docs.pinecone.io/home>`_, a vector database.
 
 Data Privacy & Security
