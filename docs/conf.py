@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Healthcare AI | Patient Education Chatbot'
+project = 'A.M.Y.T.H.E.S.T.: Healthcare AI | Patient Education Chatbot'
 copyright = '2024, Ty Rawls'
 author = 'Ty Rawls'
 
