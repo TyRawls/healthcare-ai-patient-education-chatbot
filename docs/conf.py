@@ -29,7 +29,7 @@ extensions = ['sphinx.ext.autosectionlabel', 'sphinx_copybutton', 'sphinx.ext.to
 
 html_theme = 'furo'
 html_static_path = ['_static']
-html_logo = 'img/amythest.jpeg'  # Path to your logo image
+html_logo = 'img/amythest.png'  # Path to your logo image
 
 # Adds GitHub icon to the footer (bottom right)
 html_theme_options = {

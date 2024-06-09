@@ -28,8 +28,8 @@ Inclusions
 
 Exclusions
 ----------
-* Not Focused on Reducing Healthcare Costs: Although well-informed patients who effectively manage their conditions are less likely to need emergency care or frequent hospitalizations, the primary aim of this project is not to reduce healthcare costs.
-* Not Intended to Alleviate Provider Workload: This project does not seek to replace healthcare providers or diminish their workload. Instead, it is designed to serve as an educational resource to supplement patient knowledge.
+* **Not Focused on Reducing Healthcare Costs:** Although well-informed patients who effectively manage their conditions are less likely to need emergency care or frequent hospitalizations, the primary aim of this project is not to reduce healthcare costs.
+* **Not Intended to Alleviate Provider Workload:** This project does not seek to replace healthcare providers or diminish their workload. Instead, it is designed to serve as an educational resource to supplement patient knowledge.
 
 #################
 Technical Details
@@ -40,19 +40,19 @@ Technical Details
    :alt: This is an image
 
    ETL architecture for ingesting health-related data, performing transformations, and storing it in a vector database for reference by an AI 
-   chatbot utilizing Retrieval-Augmented Generation (RAG).
+   chatbot utilizing Retrieval-Augmented Generation (RAG)
 
 Data Extraction
 ---------------
 Health-related data was extracted from `MedlinePlus <https://medlineplus.gov/>`_ using Python. Utilizing 
 `Boto3 <https://boto3.amazonaws.com/v1/documentation/api/latest/index.html>`_, a Python library for interfacing 
-with Amazon S3, the raw data was subsequently stored in an Amazon S3 bucket as a text file (.txt) for 
-preprocessing purposes.
+with `Amazon S3 <https://aws.amazon.com/pm/serv-s3/>_`, the raw data was subsequently stored in an Amazon S3 bucket
+as a text file (.txt) for preprocessing purposes.
 
 Data Transformation
 -------------------
-An Amazon Lambda function was used to preprocess the raw data in S3 into smaller chunks, ensuring it met the token 
-constraints for vector embedding. The processed data was then staged in another S3 bucket.
+An `AWS Lambda <https://aws.amazon.com/pm/lambda/>_` function was used to preprocess the raw data in S3 into smaller chunks, 
+ensuring it met the token constraints for vector embedding. The processed data was then staged in another S3 bucket.
 
 Data Loading
 ------------
@@ -60,15 +60,16 @@ Another Amazon Lambda function was utilized to process the staged data in S3 int
 `Voyage AI API <https://docs.voyageai.com/docs/embeddings>`_ (voyage-large-2 model). These embeddings were then 
 stored in `Pinecone <https://docs.pinecone.io/home>`_, a vector database.
 
-Chatbot Deployment
-------------------
-For a simple and cost-effective deployment, A.M.Y.T.H.E.S.T. was implemented using Streamlit.
-
 Data Privacy & Security
-^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------
 To ensure data privacy and security, a process was implemented to eliminate highly confidential (C4) data. This 
 category includes the most sensitive information, whose unauthorized disclosure could result in severe legal, financial, 
 or security repercussions.
 
 Prior to storing the chatbot history in an S3 bucket, names, dates of birth, locations, and phone numbers were removed 
 through a process called desensitization using an Amazon Lambda function.
+
+Chatbot Deployment
+------------------
+For a simple and cost-effective deployment, A.M.Y.T.H.E.S.T. was implemented using Streamlit.
+
