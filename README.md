@@ -1,7 +1,7 @@
 [A.M.Y.T.H.E.S.T. | Healthcare AI Patient Education Chatbot](https://tyrawls.github.io/healthcare-ai-patient-education-chatbot)
 ==============================================================================================================================
 
-<h1 align='center'> 
+<h1 align='center'>A.M.Y.T.H.E.S.T. | Healthcare AI Patient Education Chatbot
   <img width='350' height='350' src='docs/img/amythest.png' alt='AMYTHEST Logo' />
 </h1> 
 
