@@ -309,12 +309,12 @@ chatbot utilizing Retrieval-Augmented Generation (RAG)</span><a class="headerlin
 <h3>Data Extraction<a class="headerlink" href="#data-extraction" title="Link to this heading">¶</a></h3>
 <p>Health-related data was extracted from <a class="reference external" href="https://medlineplus.gov/">MedlinePlus</a> using Python. Utilizing
 <a class="reference external" href="https://boto3.amazonaws.com/v1/documentation/api/latest/index.html">Boto3</a>, a Python library for interfacing
-with <cite>Amazon S3 &lt;https://aws.amazon.com/pm/serv-s3/&gt;_</cite>, the raw data was subsequently stored in an Amazon S3 bucket
+with <a class="reference external" href="https://aws.amazon.com/pm/serv-s3/">Amazon S3</a>, the raw data was subsequently stored in an Amazon S3 bucket
 as a text file (.txt) for preprocessing purposes.</p>
 </section>
 <section id="data-transformation">
 <h3>Data Transformation<a class="headerlink" href="#data-transformation" title="Link to this heading">¶</a></h3>
-<p>An <cite>AWS Lambda &lt;https://aws.amazon.com/pm/lambda/&gt;_</cite> function was used to preprocess the raw data in S3 into smaller chunks,
+<p>An <a class="reference external" href="https://aws.amazon.com/pm/lambda/">AWS Lambda</a> function was used to preprocess the raw data in S3 into smaller chunks,
 ensuring it met the token constraints for vector embedding. The processed data was then staged in another S3 bucket.</p>
 </section>
 <section id="data-loading">

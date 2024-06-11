@@ -46,12 +46,12 @@ Data Extraction
 ---------------
 Health-related data was extracted from `MedlinePlus <https://medlineplus.gov/>`_ using Python. Utilizing 
 `Boto3 <https://boto3.amazonaws.com/v1/documentation/api/latest/index.html>`_, a Python library for interfacing 
-with `Amazon S3 <https://aws.amazon.com/pm/serv-s3/>_`, the raw data was subsequently stored in an Amazon S3 bucket
+with `Amazon S3 <https://aws.amazon.com/pm/serv-s3/>`_, the raw data was subsequently stored in an Amazon S3 bucket
 as a text file (.txt) for preprocessing purposes.
 
 Data Transformation
 -------------------
-An `AWS Lambda <https://aws.amazon.com/pm/lambda/>_` function was used to preprocess the raw data in S3 into smaller chunks, 
+An `AWS Lambda <https://aws.amazon.com/pm/lambda/>`_ function was used to preprocess the raw data in S3 into smaller chunks, 
 ensuring it met the token constraints for vector embedding. The processed data was then staged in another S3 bucket.
 
 Data Loading
