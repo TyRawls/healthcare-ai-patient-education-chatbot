@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-A.M.Y.T.H.E.S.T. | AI Healthcare Patient Education Chatbot documentation
+A.M.Y.T.H.E.S.T. | Healthcare AI Patient Education Chatbot documentation
 ========================================================================
 
 .. toctree::
