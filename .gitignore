@@ -8,3 +8,6 @@ docs/_static
 docs/.DS_Store
 docs/_templates
 
+# streamlit secrets
+.streamlit/secrets.toml
+
