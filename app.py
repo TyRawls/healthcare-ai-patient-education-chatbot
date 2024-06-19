@@ -13,6 +13,8 @@ Requirements:     - boto3
                   - pinecone
                   - langchain
                   - streamlit
+                  - streamlit_chat
+                  - langchain_groq
                   - langchain_openai
                   - langchain_voyageai
                   - langchain_pinecone
