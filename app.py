@@ -348,5 +348,5 @@ if user_input:
     # Convert the chat history to a bytes-like object
     file_obj = io.BytesIO(chat_history.encode('utf-8'))
 
-    # Upload the file to S3
+    # Upload the file to S3 bucket
     push_to_s3(file_obj, bucket_name, chat_history_key)
