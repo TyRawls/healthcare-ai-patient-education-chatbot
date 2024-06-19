@@ -1,0 +1,7 @@
+boto3
+pinecone
+langchain
+streamlit
+langchain_openai
+langchain_voyageai
+langchain_pinecone
