@@ -198,6 +198,7 @@ embeddings = VoyageAIEmbeddings(
 )
 
 # Initialize Pinecone database and retriever
+os.environ['PINECONE_API_KEY'] = PINECONE_API_KEY
 pc = Pinecone(api_key=PINECONE_API_KEY)
 index_name = 'healthcare-ai-patient-education-data'
 vector_store = PineconeVectorStore.from_existing_index(  # Retriever
