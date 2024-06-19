@@ -256,7 +256,7 @@ def retrieve_and_format_response(query, retriever, llm):
         You only answer health-related questions providing a summarized & concise explanation using a couple of sentences. \
         Only respond with the information relevant to the user query {query}, if there are none, make sure you say 'I don't know. \
         I did not find the relevant data in the knowledge base.'. In the event that there's relevant info, make sure to attach \
-        the download button at the very end: \n\n[More Info]({s3_gen_url}) Context: {combined_content}"
+        the download button at the very end: \n\nClick here ---> [More Info]({s3_gen_url}) Context: {combined_content}"
     
     # Create a HumanMessage object using the promppt
     messages = [HumanMessage(content=prompt)]
