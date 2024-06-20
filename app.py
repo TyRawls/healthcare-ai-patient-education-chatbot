@@ -99,7 +99,7 @@ llm_choice = st.sidebar.selectbox('LLM:', llm_options)
 st.sidebar.caption('Built by [Ty Rawls](https://www.linkedin.com/in/tyrellrawls/).')
 
 linkedin = 'https://i.ibb.co/5MKFS57/linkedin.gif'
-email = ''
+email = 'https://i.ibb.co/FKQqBHr/email.gif'
 medium = ''
 
 st.sidebar.caption(
