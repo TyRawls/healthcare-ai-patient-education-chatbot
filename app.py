@@ -96,6 +96,8 @@ user_icon_color = st.sidebar.selectbox('Icon Color:', color_options)
 user_message_bubble_color = st.sidebar.selectbox('Message Bubble Color:', color_options)
 llm_choice = st.sidebar.selectbox('LLM:', llm_options)
 
+st.sidebar.caption('Built by [Ty Rawls](https://www.linkedin.com/in/tyrellrawls/).')
+
 if llm_choice == 'gpt-4o':
     # Initialize OpenAI ChatGPT-4o model
     llm = ChatOpenAI(
