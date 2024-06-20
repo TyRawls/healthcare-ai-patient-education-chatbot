@@ -107,7 +107,7 @@ st.sidebar.caption(
         <div style='display: flex; align-items: center;'>
             <a href = 'https://www.linkedin.com/in/tyrellrawls/'><img src='{linkedin}' style='width: 35px; height: 35px; margin-right: 25px;'></a>
             <a href = 'mailto:tyrell.rawls@gmail.com'><img src='{email}' style='width: 28px; height: 28px; margin-right: 25px;'></a>
-            <a href = 'https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7163516439096733696'><img src='{medium}' style='width: 28px; height: 28px; margin-right: 25px;'></a>            
+            <a href = 'https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7163516439096733696'><img src='{medium}' style='width: 56px; height: 28px; margin-right: 25px;'></a>            
         </div>       
         """,
     unsafe_allow_html=True,
