@@ -8,4 +8,4 @@
 
 AMYTHEST
 --------
-AMYTHEST (AI Messaging Yielding Thoughtful Human-like Engagement Systems Technology) is an AI chatbot developed to deliver high-quality health education materials utilizing Retrieval-Augmented Generation (RAG), thereby improving outcomes for both patients and healthcare providers.
+**AMYTHEST** (AI Messaging Yielding Thoughtful Human-like Engagement Systems Technology) is an AI chatbot developed to deliver high-quality health education materials utilizing Retrieval-Augmented Generation (RAG), thereby improving outcomes for both patients and healthcare providers.
