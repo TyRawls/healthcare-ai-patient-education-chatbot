@@ -105,9 +105,9 @@ medium = 'https://i.ibb.co/rdDqjnX/medium.png'
 st.sidebar.caption(
     f"""
         <div style='display: flex; align-items: center;'>
-            <a href = 'https://www.linkedin.com/in/tyrellrawls/'><img src='{linkedin}' style='width: 35px; height: 35px; margin-right: 20px;'></a>
-            <a href = 'mailto:tyrell.rawls@gmail.com'><img src='{email}' style='width: 38px; height: 38px; margin-right: 25px;'></a>
-            <a href = 'https://tyrawls.medium.com/'><img src='{medium}' style='width: 28px; height: 28px; margin-right: 25px;'></a>            
+            <a href = 'https://www.linkedin.com/in/tyrellrawls/'><img src='{linkedin}' style='width: 35px; height: 35px; margin-right: 25px;'></a>
+            <a href = 'mailto:tyrell.rawls@gmail.com'><img src='{email}' style='width: 35px; height: 35px; margin-right: 25px;'></a>
+            <a href = 'https://tyrawls.medium.com/'><img src='{medium}' style='width: 35px; height: 35px; margin-right: 25px;'></a>            
         </div>       
         """,
     unsafe_allow_html=True,
