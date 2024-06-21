@@ -96,7 +96,7 @@ user_icon_color = st.sidebar.selectbox('Icon Color:', color_options)
 user_message_bubble_color = st.sidebar.selectbox('Message Bubble Color:', color_options)
 llm_choice = st.sidebar.selectbox('LLM:', llm_options)
 
-st.sidebar.caption('Built by [Ty Rawls](https://www.linkedin.com/in/tyrellrawls/).')
+st.sidebar.caption('Developed by [Ty Rawls](https://www.linkedin.com/in/tyrellrawls/). See [documentation](https://tyrawls.github.io/healthcare-ai-patient-education-chatbot/_build/html/index.html) for more info.')
 
 linkedin = 'https://i.ibb.co/5MKFS57/linkedin.gif'
 email = 'https://i.ibb.co/FKQqBHr/email.gif'
