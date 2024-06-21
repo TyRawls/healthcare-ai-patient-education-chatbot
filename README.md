@@ -1,5 +1,5 @@
 <p align='center'>
-  <img width='900' height='90' src='docs/img/amythest_banner.png' alt='AMYTHEST Banner' />
+  <img width='850' height='85' src='docs/img/amythest_banner.png' alt='AMYTHEST Banner' />
 </p> 
 
 <p align='center'>
