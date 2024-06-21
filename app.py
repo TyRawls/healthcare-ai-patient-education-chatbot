@@ -98,7 +98,7 @@ llm_choice = st.sidebar.selectbox('LLM:', llm_options)
 
 st.sidebar.caption(
     'Developed by [Ty Rawls](https://www.linkedin.com/in/tyrellrawls/)\n\n'
-    'See [documentation](https://tyrawls.github.io/healthcare-ai-patient-education-chatbot/_build/html/index.html) for more info'
+    'Want to know more about AMYTHEST? See [documentation](https://tyrawls.github.io/healthcare-ai-patient-education-chatbot/_build/html/index.html) for more info.'
 )
 
 linkedin = 'https://i.ibb.co/5MKFS57/linkedin.gif'
