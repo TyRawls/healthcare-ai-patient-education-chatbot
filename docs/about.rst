@@ -71,5 +71,5 @@ through a process called desensitization using an Amazon Lambda function.
 
 Chatbot Deployment
 ------------------
-For a simple and cost-effective deployment, A.M.Y.T.H.E.S.T. was implemented using Streamlit.
+For a simple and cost-effective deployment, `A.M.Y.T.H.E.S.T. <https://amythest.streamlit.app/>`_ was implemented using Streamlit.
 
