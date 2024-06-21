@@ -100,7 +100,7 @@ st.sidebar.caption('Developed by [Ty Rawls](https://www.linkedin.com/in/tyrellra
 
 linkedin = 'https://i.ibb.co/5MKFS57/linkedin.gif'
 email = 'https://i.ibb.co/FKQqBHr/email.gif'
-medium = 'https://i.ibb.co/JRzVBZ6/medium.gif'
+medium = 'https://i.ibb.co/rdDqjnX/medium.png'
 
 st.sidebar.caption(
     f"""
