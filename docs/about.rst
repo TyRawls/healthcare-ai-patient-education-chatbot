@@ -22,7 +22,7 @@ Project Goals & Non-goals
 
 Inclusions
 ----------
-* **Develop an AI Chatbot:** Develop an AI-driven chatbot, named AMYTHEST (AI Messaging Yielding Thoughtful Human-like Engagement Systems Technology), to provide high-quality health education materials.
+* **Develop an AI Chatbot:** Develop an AI-driven chatbot, named `AMYTHEST <https://amythest.streamlit.app/>`_ (AI Messaging Yielding Thoughtful Human-like Engagement Systems Technology), to provide high-quality health education materials.
 * **Enhance Health Literacy:** Improve patient understanding of health information to promote better health management.
 * **Improve Treatment Adherence:** Increase compliance with treatment plans by providing clear and accessible health information.
 
@@ -49,6 +49,16 @@ Health-related data was extracted from `MedlinePlus <https://medlineplus.gov/>`_
 with `Amazon S3 <https://aws.amazon.com/pm/serv-s3/>`_, the raw data was subsequently stored in an Amazon S3 bucket
 as a text file (.txt) for preprocessing purposes.
 
+Health-related data was retrieved from `MedlinePlus <https://medlineplus.gov/>`_ using Python, encompassing four distinct sections:
+
+- `Medical Encyclopedia Articles <https://medlineplus.gov/encyclopedia.html>`_: The A.D.A.M or Animated Dissection of Anatomy for Medicine Medical Encyclopedia includes over 4,000 articles about diseases, tests, symptoms, injuries, and surgeries.
+- `Laboratory Tests <https://medlineplus.gov/lab-tests/>`_: Medical tests can help detect a condition, determine a diagnosis, plan treatment, check to see if treatment is working, or monitor the condition over time.
+- `Medical Drugs <https://medlineplus.gov/druginformation.html>`_: Contains prescription and over-the-counter medication information from American Hospital Formulary Service Drug Information (AHFS DI), the most comprehensive evidence-based source of drug information complete with therapeutic guidelines and off-label uses.
+- `Genetic Conditions <https://medlineplus.gov/genetics/>`_: Provides information on the signs, symptoms, causes, and inheritance of more than 1,300 health conditions with a genetic basis.
+- `Healthy Recipes <https://medlineplus.gov/recipes/>`_: Contains recipes that guide you in preparing delicious, nutritious meals to support the development of a healthy eating pattern.
+
+Utilizing `Boto3 <https://boto3.amazonaws.com/v1/documentation/api/latest/index.html>`_, a Python library for interfacing with Amazon S3, the raw data was subsequently stored in an Amazon S3 bucket as a text file (.txt) for preprocessing purposes.
+
 Data Transformation
 -------------------
 An `AWS Lambda <https://aws.amazon.com/pm/lambda/>`_ function was used to preprocess the raw data in S3 into smaller chunks, 
@@ -71,5 +81,5 @@ through a process called desensitization using an Amazon Lambda function.
 
 Chatbot Deployment
 ------------------
-For a simple and cost-effective deployment, `A.M.Y.T.H.E.S.T. <https://amythest.streamlit.app/>`_ was implemented using Streamlit.
+For a simple and cost-effective deployment, `AMYTHEST <https://amythest.streamlit.app/>`_ was implemented using Streamlit.
 

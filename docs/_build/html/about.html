@@ -282,7 +282,7 @@ which results in many patients receiving inadequate information about their heal
 <section id="inclusions">
 <h3>Inclusions<a class="headerlink" href="#inclusions" title="Link to this heading">¶</a></h3>
 <ul class="simple">
-<li><p><strong>Develop an AI Chatbot:</strong> Develop an AI-driven chatbot, named AMYTHEST (AI Messaging Yielding Thoughtful Human-like Engagement Systems Technology), to provide high-quality health education materials.</p></li>
+<li><p><strong>Develop an AI Chatbot:</strong> Develop an AI-driven chatbot, named <a class="reference external" href="https://amythest.streamlit.app/">AMYTHEST</a> (AI Messaging Yielding Thoughtful Human-like Engagement Systems Technology), to provide high-quality health education materials.</p></li>
 <li><p><strong>Enhance Health Literacy:</strong> Improve patient understanding of health information to promote better health management.</p></li>
 <li><p><strong>Improve Treatment Adherence:</strong> Increase compliance with treatment plans by providing clear and accessible health information.</p></li>
 </ul>
@@ -297,12 +297,12 @@ which results in many patients receiving inadequate information about their heal
 </section>
 <section id="technical-details">
 <h2>Technical Details<a class="headerlink" href="#technical-details" title="Link to this heading">¶</a></h2>
-<figure class="align-default" id="id1">
+<figure class="align-default" id="id4">
 <a class="reference internal image-reference" href="_images/ai_chatbot_data_architecture.png"><img alt="This is an image" src="_images/ai_chatbot_data_architecture.png" style="width: 800px;" />
 </a>
 <figcaption>
 <p><span class="caption-text">ETL architecture for ingesting health-related data, performing transformations, and storing it in a vector database for reference by an AI
-chatbot utilizing Retrieval-Augmented Generation (RAG)</span><a class="headerlink" href="#id1" title="Link to this image">¶</a></p>
+chatbot utilizing Retrieval-Augmented Generation (RAG)</span><a class="headerlink" href="#id4" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <section id="data-extraction">
@@ -311,6 +311,15 @@ chatbot utilizing Retrieval-Augmented Generation (RAG)</span><a class="headerlin
 <a class="reference external" href="https://boto3.amazonaws.com/v1/documentation/api/latest/index.html">Boto3</a>, a Python library for interfacing
 with <a class="reference external" href="https://aws.amazon.com/pm/serv-s3/">Amazon S3</a>, the raw data was subsequently stored in an Amazon S3 bucket
 as a text file (.txt) for preprocessing purposes.</p>
+<p>Health-related data was retrieved from <a class="reference external" href="https://medlineplus.gov/">MedlinePlus</a> using Python, encompassing four distinct sections:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://medlineplus.gov/encyclopedia.html">Medical Encyclopedia Articles</a>: The A.D.A.M or Animated Dissection of Anatomy for Medicine Medical Encyclopedia includes over 4,000 articles about diseases, tests, symptoms, injuries, and surgeries.</p></li>
+<li><p><a class="reference external" href="https://medlineplus.gov/lab-tests/">Laboratory Tests</a>: Medical tests can help detect a condition, determine a diagnosis, plan treatment, check to see if treatment is working, or monitor the condition over time.</p></li>
+<li><p><a class="reference external" href="https://medlineplus.gov/druginformation.html">Medical Drugs</a>: Contains prescription and over-the-counter medication information from American Hospital Formulary Service Drug Information (AHFS DI), the most comprehensive evidence-based source of drug information complete with therapeutic guidelines and off-label uses.</p></li>
+<li><p><a class="reference external" href="https://medlineplus.gov/genetics/">Genetic Conditions</a>: Provides information on the signs, symptoms, causes, and inheritance of more than 1,300 health conditions with a genetic basis.</p></li>
+<li><p><a class="reference external" href="https://medlineplus.gov/recipes/">Healthy Recipes</a>: Contains recipes that guide you in preparing delicious, nutritious meals to support the development of a healthy eating pattern.</p></li>
+</ul>
+<p>Utilizing <a class="reference external" href="https://boto3.amazonaws.com/v1/documentation/api/latest/index.html">Boto3</a>, a Python library for interfacing with Amazon S3, the raw data was subsequently stored in an Amazon S3 bucket as a text file (.txt) for preprocessing purposes.</p>
 </section>
 <section id="data-transformation">
 <h3>Data Transformation<a class="headerlink" href="#data-transformation" title="Link to this heading">¶</a></h3>
@@ -333,7 +342,7 @@ through a process called desensitization using an Amazon Lambda function.</p>
 </section>
 <section id="chatbot-deployment">
 <h3>Chatbot Deployment<a class="headerlink" href="#chatbot-deployment" title="Link to this heading">¶</a></h3>
-<p>For a simple and cost-effective deployment, <a class="reference external" href="https://amythest.streamlit.app/">A.M.Y.T.H.E.S.T.</a> was implemented using Streamlit.</p>
+<p>For a simple and cost-effective deployment, <a class="reference external" href="https://amythest.streamlit.app/">AMYTHEST</a> was implemented using Streamlit.</p>
 </section>
 </section>
 </section>
