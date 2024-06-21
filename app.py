@@ -64,7 +64,7 @@ user_cyan_icon    = 'https://i.ibb.co/LPtzryF/human-cyan.png'
 user_fuchsia_icon = 'https://i.ibb.co/64vZHsv/human-fuchsia.png'
 
 # Set the page title, layout, and icon for the browser tab 
-st.set_page_config(page_title='A.M.Y.T.H.E.S.T. | Healthcare AI Patient Education Chatbot', 
+st.set_page_config(page_title='AMYTHEST | Healthcare AI Patient Education Chatbot', 
                    layout='wide', 
                    page_icon=amythest_icon)
 
@@ -73,7 +73,7 @@ st.logo(amythest_banner, icon_image=amythest_icon)
 
 # Set title of application
 st.markdown(
-    '<h1 style="text-align: center;">A.M.Y.T.H.E.S.T. | Healthcare AI Patient Education Chatbot</h1>',
+    '<h1 style="text-align: center;">AMYTHEST | Healthcare AI Patient Education Chatbot</h1>',
     unsafe_allow_html=True
 )
 
