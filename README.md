@@ -2,14 +2,9 @@
   <img width='900' height='90' src='docs/img/amythest_banner.png' alt='AMYTHEST Banner' />
 </p> 
 
-<!-- <p align='center'>
-  <img width='325' height='325' src='docs/img/amythest.png' alt='AMYTHEST Logo' />
-</p>  -->
-
 <p align='center'>
-  <b> <a href='https://tyrawls.github.io/healthcare-ai-patient-education-chatbot'>Documentation</a> | <a href=''>Demo</a> | <a href='https://www.linkedin.com/in/tyrellrawls/'>LinkedIn</a> </b>
+  <b> <a href='https://amythest.streamlit.app/'>Application</a> | <a href='https://tyrawls.github.io/healthcare-ai-patient-education-chatbot'>Documentation</a> | <a href=''>Demo</a> | <a href='https://www.linkedin.com/in/tyrellrawls/'>LinkedIn</a> </b>
 </p>
-
 
 About
 -----
