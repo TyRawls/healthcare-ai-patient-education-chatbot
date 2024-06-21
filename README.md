@@ -9,7 +9,7 @@
 </p>  -->
 
 <p align='center'>
-  <b> <a href='https://tyrawls.github.io/healthcare-ai-patient-education-chatbot'>Documentation</a> | <a href='https://www.linkedin.com/in/tyrellrawls/'>LinkedIn</a> </b>
+  <b> <a href='https://tyrawls.github.io/healthcare-ai-patient-education-chatbot'>Documentation</a> | <a href=''>Demo</a> | <a href='https://www.linkedin.com/in/tyrellrawls/'>LinkedIn</a> </b>
 </p>
 
 
