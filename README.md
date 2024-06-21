@@ -1,13 +1,16 @@
 [A.M.Y.T.H.E.S.T. | Healthcare AI Patient Education Chatbot](https://tyrawls.github.io/healthcare-ai-patient-education-chatbot)
 ==============================================================================================================================
-
 <p align='center'>
-<img width='350' height='350' src='docs/img/amythest.png' alt='AMYTHEST Logo' />
+  <img width='325' height='325' src='docs/img/amythest_banner.png' alt='AMYTHEST Banner' />
 </p> 
 
-<!-- <p align="center">
-<img src='docs/img/amythest.png' width="50%" height="40%">
-</p> -->
+<p align='center'>
+  <img width='325' height='325' src='docs/img/amythest.png' alt='AMYTHEST Logo' />
+</p> 
+
+<p align='center'>
+  <b> <a href='https://docs.marqo.ai'>Documentation</a> | <a href='https://demo.marqo.ai'>LinkedIn</a> </b>
+</p>
 
 
 About
