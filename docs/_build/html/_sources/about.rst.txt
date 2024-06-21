@@ -22,7 +22,7 @@ Project Goals & Non-goals
 
 Inclusions
 ----------
-* **Develop an AI Chatbot:** Develop an AI-driven chatbot, named A.M.Y.T.H.E.S.T. (AI Messaging Yielding Thoughtful Human-like Engagement Systems Technology), to provide high-quality health education materials.
+* **Develop an AI Chatbot:** Develop an AI-driven chatbot, named AMYTHEST (AI Messaging Yielding Thoughtful Human-like Engagement Systems Technology), to provide high-quality health education materials.
 * **Enhance Health Literacy:** Improve patient understanding of health information to promote better health management.
 * **Improve Treatment Adherence:** Increase compliance with treatment plans by providing clear and accessible health information.
 
