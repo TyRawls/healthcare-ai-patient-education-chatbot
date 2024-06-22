@@ -66,9 +66,16 @@ ensuring it met the token constraints for vector embedding. The processed data w
 
 Data Loading
 ------------
-Another Amazon Lambda function was utilized to process the staged data in S3 into vector embeddings using the 
-`Voyage AI API <https://docs.voyageai.com/docs/embeddings>`_ (voyage-large-2 model). These embeddings were then 
-stored in `Pinecone <https://docs.pinecone.io/home>`_, a vector database.
+Another AWS Lambda function was utilized to process the staged data in S3 into vector embeddings using the 
+`Voyage AI API <https://docs.voyageai.com/docs/introduction>`_ (voyage-large-2 model). These embeddings were then 
+stored in `Pinecone <https://docs.pinecone.io/home>`_, a vector database, with the following metadata format:
+
+* **id:** The S3 Uniform Resource Identifier (URI), encompassing the bucket name and file key (s3://bucket_name/file_key) of the document.
+* **subject:** Title of the document
+* **text:** Contains the context of the document
+* **tokens:** Total amount tokens in a document
+
+
 
 Data Privacy & Security
 -----------------------

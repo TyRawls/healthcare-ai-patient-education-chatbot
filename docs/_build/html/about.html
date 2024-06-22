@@ -328,9 +328,15 @@ ensuring it met the token constraints for vector embedding. The processed data w
 </section>
 <section id="data-loading">
 <h3>Data Loading<a class="headerlink" href="#data-loading" title="Link to this heading">¶</a></h3>
-<p>Another Amazon Lambda function was utilized to process the staged data in S3 into vector embeddings using the
-<a class="reference external" href="https://docs.voyageai.com/docs/embeddings">Voyage AI API</a> (voyage-large-2 model). These embeddings were then
-stored in <a class="reference external" href="https://docs.pinecone.io/home">Pinecone</a>, a vector database.</p>
+<p>Another AWS Lambda function was utilized to process the staged data in S3 into vector embeddings using the
+<a class="reference external" href="https://docs.voyageai.com/docs/introduction">Voyage AI API</a> (voyage-large-2 model). These embeddings were then
+stored in <a class="reference external" href="https://docs.pinecone.io/home">Pinecone</a>, a vector database, with the following metadata format:</p>
+<ul class="simple">
+<li><p><strong>id:</strong> The S3 Uniform Resource Identifier (URI), encompassing the bucket name and file key (s3://bucket_name/file_key) of the document.</p></li>
+<li><p><strong>subject:</strong> Title of the document</p></li>
+<li><p><strong>text:</strong> Contains the context of the document</p></li>
+<li><p><strong>tokens:</strong> Total amount tokens in a document</p></li>
+</ul>
 </section>
 <section id="data-privacy-security">
 <h3>Data Privacy &amp; Security<a class="headerlink" href="#data-privacy-security" title="Link to this heading">¶</a></h3>
