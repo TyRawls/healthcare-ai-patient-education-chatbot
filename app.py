@@ -81,9 +81,9 @@ st.sidebar.caption(
     'Want to know more about AMYTHEST? See [documentation](https://tyrawls.github.io/healthcare-ai-patient-education-chatbot/_build/html/index.html) for more info.'
 )
 
-linkedin = '../docs/img/linkedin.gif'
-email    = '../docs/img/email.gif'
-medium   = '../docs/img/medium.png'
+linkedin = 'https://i.ibb.co/5MKFS57/linkedin.gif'
+email    = 'https://i.ibb.co/FKQqBHr/email.gif'
+medium   = 'https://i.ibb.co/rdDqjnX/medium.png'
 
 st.sidebar.caption(
     f"""
