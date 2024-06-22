@@ -1,28 +1,8 @@
 '''
 -------------------------------------------------------------------------------
-File Name:        app.py
-
-Description:      Engages a chatbot to handle health-related text queries and stores 
-                  the chat history in an Amazon S3 bucket.
-
-Author:           Ty Rawls
-Email:            tyrell.rawls@gmail.com
-Date:             2024-06-19
-
-Requirements:     - boto3
-                  - pinecone
-                  - langchain
-                  - streamlit
-                  - streamlit_chat
-                  - langchain_groq
-                  - langchain_openai
-                  - langchain_voyageai
-                  - langchain_pinecone
-               
-Notes:            This script is designed to handle health-related text queries and 
-                  provide appropriate responses. Modify the prompt template as 
-                  needed to tailor the chatbot to your specific requirements. 
-
+Developed by:  Ty Rawls
+Email:         tyrell.rawls@gmail.com
+LinkedIn:      https://www.linkedin.com/in/tyrellrawls/
 -------------------------------------------------------------------------------
 '''
 
@@ -45,7 +25,7 @@ from langchain_pinecone import PineconeVectorStore
 from langchain.memory import ConversationBufferMemory
 
 
-# Ignore specific warning by category
+# Ignore specific warnings by category
 warnings.filterwarnings('ignore', category=DeprecationWarning)
 
 # Setup - Streamlit secrets
@@ -88,7 +68,7 @@ st.markdown(
 )
 st.header('', divider='violet')  # Add horizontal page divider
 
-# Setup sidebar options
+# Setup sidebar options and captions
 st.sidebar.header('Settings')
 color_options = ['Cyan', 'Fuchsia']
 llm_options = ['gpt-4o', 'llama3-8b-8192', 'gemma-7b-it']
@@ -116,6 +96,7 @@ st.sidebar.caption(
     unsafe_allow_html=True,
 )
 
+# Choose LLM
 if llm_choice == 'gpt-4o':
     # Initialize OpenAI ChatGPT-4o model
     llm = ChatOpenAI(
