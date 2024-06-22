@@ -37,7 +37,7 @@ Technical Details
 
 .. figure:: img/ai_chatbot_data_architecture.png
    :width: 800   
-   :alt: This is an image
+   :alt: Data architecture
 
    ETL architecture for ingesting health-related data, performing transformations, and storing it in a vector database for reference by an AI 
    chatbot utilizing Retrieval-Augmented Generation (RAG)
@@ -75,7 +75,11 @@ stored in `Pinecone <https://docs.pinecone.io/home>`_, a vector database, with t
 * **text:** Contains the context of the document
 * **tokens:** Total amount tokens in a document
 
+.. figure:: img/pinecone_data_structure.png
+   :width: 800   
+   :alt: Pinecone sample data
 
+   Sample data from the Pinecone database
 
 Data Privacy & Security
 -----------------------
@@ -89,4 +93,14 @@ through a process called desensitization using an Amazon Lambda function.
 Chatbot Deployment
 ------------------
 For a simple and cost-effective deployment, `AMYTHEST <https://amythest.streamlit.app/>`_ was implemented using Streamlit.
+
+Key Features
+^^^^^^^^^^^^
+* Accepts health-related input queries
+* Modify user chat bubble and icon color
+* Choose between three different Language Learning Models (LLM):
+    * OpenAI - ChatGPT 4o
+    * META - LLaMA 3
+    * Google - Gemma
+* Returns health-related information based on query
 

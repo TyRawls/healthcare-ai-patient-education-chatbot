@@ -11,7 +11,7 @@ copyright = '2024, Ty Rawls'
 author = 'Ty Rawls'
 
 # The full version, including alpha/beta/rc tags
-release = 'v0.0.1'
+release = 'v1.0.1'
 
 
 # -- General configuration ---------------------------------------------------
