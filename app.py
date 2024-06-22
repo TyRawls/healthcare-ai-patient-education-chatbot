@@ -81,9 +81,9 @@ st.sidebar.caption(
     'Want to know more about AMYTHEST? See [documentation](https://tyrawls.github.io/healthcare-ai-patient-education-chatbot/_build/html/index.html) for more info.'
 )
 
-linkedin = 'https://i.ibb.co/5MKFS57/linkedin.gif'
-email = 'https://i.ibb.co/FKQqBHr/email.gif'
-medium = 'https://i.ibb.co/rdDqjnX/medium.png'
+linkedin = 'docs/img/linkedin.gif'
+email    = 'docs/img/email.gif'
+medium   = 'docs/img/medium.png'
 
 st.sidebar.caption(
     f"""
@@ -115,7 +115,6 @@ else:
         model_name='gemma-7b-it', 
         groq_api_key=GROQ_API_KEY
     )
-
 
 if user_message_bubble_color == 'Cyan':
     # Custom HTML and CSS for chat message styling
@@ -186,10 +185,11 @@ else:
 st.markdown(chat_message_config, unsafe_allow_html=True)
 
 # Initiate a random session ID for chat history key (filename)
-current_date = datetime.now().date()
-session_id = str(uuid.uuid4())
-bucket_name = 'ai-chat-history'
+current_date     = datetime.now().date()
+session_id       = str(uuid.uuid4())
+bucket_name      = 'ai-chat-history'
 chat_history_key = f'raw/{current_date}/chat_history_{session_id}.txt'
+
 print(f'chat_history_key: {chat_history_key}')
 
 # Initialize Voyage AI vector embedding model
@@ -224,9 +224,9 @@ s3 = boto3.client(
 # Function to generate pre-signed URL
 def generate_presigned_url(s3_uri):
     # Parse the S3 URI
-    parsed_url = urlparse(s3_uri)
+    parsed_url  = urlparse(s3_uri)
     bucket_name = parsed_url.netloc
-    object_key = parsed_url.path.lstrip('/')
+    object_key  = parsed_url.path.lstrip('/')
     
     # Generate a pre-signed URL for the S3 object
     presigned_url = s3.generate_presigned_url(
@@ -243,9 +243,9 @@ def retrieve_and_format_response(query, retriever, llm):
     
     formatted_docs = []
     for doc in docs:
-        content_data = doc.page_content
-        s3_uri = doc.metadata['id']
-        s3_gen_url = generate_presigned_url(s3_uri)
+        content_data  = doc.page_content
+        s3_uri        = doc.metadata['id']
+        s3_gen_url    = generate_presigned_url(s3_uri)
         formatted_doc = f'{content_data}\n\n[More Info]({s3_gen_url})'
         formatted_docs.append(formatted_doc)
         
