@@ -15,10 +15,9 @@
 
 ### ⚡ Key Features
 
-* Accepts health-related input queries
+* Accepts health-related input queries and provides a response based on the query
 * Modify user chat bubble and icon color
 * Choose between three different Language Learning Models (LLM):
     * OpenAI - ChatGPT 4o
     * META - LLaMA 3
     * Google - Gemma
-* Returns health-related information based on query
