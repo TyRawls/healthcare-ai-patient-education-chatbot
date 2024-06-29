@@ -359,7 +359,7 @@ through a process called desensitization using an Amazon Lambda function.</p>
 <section id="key-features">
 <h4>Key Features<a class="headerlink" href="#key-features" title="Link to this heading">¶</a></h4>
 <ul class="simple">
-<li><p>Accepts health-related input queries</p></li>
+<li><p>Accepts health-related input queries and provides a response based on the query</p></li>
 <li><p>Modify user chat bubble and icon color</p></li>
 <li><dl class="simple">
 <dt>Choose between three different Language Learning Models (LLM):</dt><dd><ul>
@@ -372,6 +372,20 @@ through a process called desensitization using an Amazon Lambda function.</p>
 </li>
 <li><p>Returns health-related information based on query</p></li>
 </ul>
+</section>
+<section id="how-it-works">
+<h4>How It Works<a class="headerlink" href="#how-it-works" title="Link to this heading">¶</a></h4>
+<p>AMYTHEST uses RAG technology which is a method that enhances the generation of text by integrating relevant information retrieved from
+a knowledge base or dataset to provide more accurate and contextually appropriate responses.</p>
+<p>A user input query is converted into a vector embedding, which is then compared to the documents in the Pinecone database to retrieve
+the most relevant matches. The identified documents are subsequently provided to the LLM to generate a human-like response.</p>
+<figure class="align-default" id="id6">
+<a class="reference internal image-reference" href="_images/rag_architecture.png"><img alt="RAG architecture" src="_images/rag_architecture.png" style="width: 600px;" />
+</a>
+<figcaption>
+<p><span class="caption-text">This diagram highlights the RAG section in the data architecture</span><a class="headerlink" href="#id6" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
 </section>
 </section>
 </section>
@@ -445,6 +459,7 @@ through a process called desensitization using an Amazon Lambda function.</p>
 <li><a class="reference internal" href="#data-privacy-security">Data Privacy &amp; Security</a></li>
 <li><a class="reference internal" href="#chatbot-deployment">Chatbot Deployment</a><ul>
 <li><a class="reference internal" href="#key-features">Key Features</a></li>
+<li><a class="reference internal" href="#how-it-works">How It Works</a></li>
 </ul>
 </li>
 </ul>
