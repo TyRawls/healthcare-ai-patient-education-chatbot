@@ -21,3 +21,14 @@
     * OpenAI - ChatGPT 4o
     * META - LLaMA 3
     * Google - Gemma
+
+### 🧠 How It Works
+
+AMYTHEST uses RAG technology which is a method that enhances the generation of text by integrating relevant information retrieved from a knowledge base or dataset to provide more accurate and contextually appropriate responses.
+
+A user input query is converted into a vector embedding, which is then compared to the documents in the Pinecone database to retrieve the most relevant matches. The identified documents are subsequently provided to the LLM to generate a human-like response.
+
+<!--RAG Architecture-->
+<p align='center'>
+  <img width='500' height='545' src='docs/img/rag_architecture.png' alt='RAG Architecture' />
+</p>
