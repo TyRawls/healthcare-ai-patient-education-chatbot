@@ -113,7 +113,7 @@ A user input query is converted into a vector embedding, which is then compared 
 the most relevant matches. The identified documents are subsequently provided to the LLM to generate a human-like response.
 
 .. figure:: img/rag_architecture.png
-   :width: 400   
+   :width: 500   
    :alt: RAG architecture
 
    This diagram highlights the RAG section in the data architecture
