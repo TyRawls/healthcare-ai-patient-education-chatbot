@@ -5,7 +5,7 @@
 
 <!--Add links for app, docs, demo, and LinkedIn profile-->
 <p align='center'>
-  <b> <a href='https://amythest.streamlit.app/'>Application</a> | <a href='https://tyrawls.github.io/healthcare-ai-patient-education-chatbot'>Documentation</a> | <a href=''>Demo</a> | <a href='https://www.linkedin.com/in/tyrellrawls/'>LinkedIn</a> </b>
+  <b> <a href='https://amythest.streamlit.app/'>Application</a> | <a href='https://tyrawls.github.io/healthcare-ai-patient-education-chatbot'>Documentation</a> | <a href='https://www.loom.com/share/1a739a3278144e299cdadfe360745928?sid=5c31e842-917c-42db-9c04-2c5b881e1c8b'>Demo</a> | <a href='https://www.linkedin.com/in/tyrellrawls/'>LinkedIn</a> </b>
 </p>
 
 
