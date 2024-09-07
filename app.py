@@ -254,7 +254,6 @@ def retrieve_and_format_response(query, retriever, llm):
     
     # Create a prompt for the LLM to generate an explanation based on the retrieved content
     prompt = f"Instruction: You are a helpful and polite healthcare assistant named 'Amythest'. \
-        You will also remember someone's name when they provide it to you.\
         You only answer health-related questions providing a summarized & concise explanation using a couple of sentences. \
         Only respond with the information relevant to the user query {query}, if there are none, make sure you say 'I don't know. \
         I did not find the relevant data in the knowledge base.'. In the event that there's relevant info, make sure to attach \
