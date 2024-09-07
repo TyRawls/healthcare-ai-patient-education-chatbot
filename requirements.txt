@@ -1,4 +1,5 @@
 boto3
+spacey
 pinecone
 langchain
 streamlit
