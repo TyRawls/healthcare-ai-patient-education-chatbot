@@ -10,6 +10,7 @@ import os
 import io
 import uuid
 import boto3
+import spacy
 import warnings
 import streamlit as st
 from pinecone import Pinecone
@@ -316,6 +317,18 @@ def render_message(message, role):
     st.markdown(message_html, unsafe_allow_html=True)
 
     return message_html
+
+
+# Load the English NLP model
+nlp = spacy.load("en_core_web_sm")
+
+def detect_name(text):
+    doc = nlp(text)
+    # Extract named entities of type 'PERSON'
+    for ent in doc.ents:
+        if ent.label_ == "PERSON":
+            return ent.text
+    return None
 
 
 # Initialize chat history
