@@ -360,8 +360,6 @@ if user_input:
     user_content = render_message(user_input, 'user')
     save_name(user_input)
 
-    st.write(f"Hello, {st.session_state.name}!")
-
     # Add user message to chat history
     st.session_state['messages'].append({'role': 'user', 'content': user_content})
     
