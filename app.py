@@ -239,7 +239,7 @@ def generate_presigned_url(s3_uri):
 
 
 # Function to retrieve documents, generate URLs, and format the response
-def retrieve_and_format_response(query, retriever, llm):
+def retrieve_and_format_response(query, retriever, llm, name=st.session_state.name):
     docs = retriever.get_relevant_documents(query)
 
     formatted_docs = []
