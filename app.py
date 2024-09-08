@@ -319,7 +319,7 @@ def render_message(message, role):
 
     return message_html
 
-
+# Function to detect a user's name
 def detect_name(text):
     # Try to match patterns like "My name is John" or "I'm John"
     patterns = [
@@ -327,14 +327,14 @@ def detect_name(text):
         r"i am ([A-Z][a-z]+)",        # Pattern for "I am X"
         r"i'm ([A-Z][a-z]+)"          # Pattern for "I'm X"
     ]
-    
+    # Return the user's name if it exists
     for pattern in patterns:
         match = re.search(pattern, text, re.IGNORECASE)
         if match:
             return match.group(1)
     return None
 
-# Initialize session state variable for storing name
+# Initialize session state variable for storing the user's name
 if 'name' not in st.session_state:
     st.session_state.name = ''
 
@@ -342,7 +342,7 @@ if 'name' not in st.session_state:
 def save_name(user_input):
     user_name = detect_name(user_input)
     if user_name != None:
-        st.session_state.name = user_name
+        st.session_state.name = user_name  
 
 # Initialize chat history
 if 'messages' not in st.session_state:
