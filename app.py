@@ -340,7 +340,9 @@ if 'name' not in st.session_state:
 
 # Function to update the name in session state
 def save_name(user_input):
-    st.session_state.name = detect_name(user_input)
+    user_name = detect_name(user_input)
+    if user_name != None:
+        st.session_state.name = user_name
 
 # Initialize chat history
 if 'messages' not in st.session_state:
@@ -357,7 +359,7 @@ if user_input:
     chat_history = f'Session ID: {session_id}\n-------------------------------------------------\n'
     user_content = render_message(user_input, 'user')
     save_name(user_input)
-    
+
     # Display current name value
     st.write(f"Hello, {st.session_state.name}!")
 
