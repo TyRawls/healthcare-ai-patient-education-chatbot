@@ -241,10 +241,6 @@ def generate_presigned_url(s3_uri):
 # Function to retrieve documents, generate URLs, and format the response
 def retrieve_and_format_response(query, retriever, llm):
     docs = retriever.get_relevant_documents(query)
-    global user_name
-    temp_name = detect_name(query)
-    if temp_name != None:
-        user_name = temp_name
 
     formatted_docs = []
     for doc in docs:
@@ -259,7 +255,7 @@ def retrieve_and_format_response(query, retriever, llm):
     
     # Create a prompt for the LLM to generate an explanation based on the retrieved content
     prompt = f"Instruction: You are a helpful and polite healthcare assistant named 'Amythest'. \
-        If a user asks what their name is, you will reply with their name {user_name}. \
+        If a user asks what their name is, you will reply with their name {st.session_state.name}. \
         You only answer health-related questions providing a summarized & concise explanation using a couple of sentences. \
         Only respond with the information relevant to the user query {query}, if there are none, make sure you say 'I don't know. \
         I did not find the relevant data in the knowledge base.'. In the event that there's relevant info, make sure to attach \
@@ -338,6 +334,13 @@ def detect_name(text):
             return match.group(1)
     return None
 
+# Initialize session state variable for storing name
+if 'name' not in st.session_state:
+    st.session_state.name = ''
+
+# Function to update the name in session state
+def save_name(user_input):
+    st.session_state.name = detect_name(user_input)
 
 # Initialize chat history
 if 'messages' not in st.session_state:
@@ -353,6 +356,7 @@ user_input = st.chat_input('You: ')
 if user_input:
     chat_history = f'Session ID: {session_id}\n-------------------------------------------------\n'
     user_content = render_message(user_input, 'user')
+    save_name(user_input)
 
     # Add user message to chat history
     st.session_state['messages'].append({'role': 'user', 'content': user_content})
