@@ -241,7 +241,10 @@ def generate_presigned_url(s3_uri):
 # Function to retrieve documents, generate URLs, and format the response
 def retrieve_and_format_response(query, retriever, llm):
     docs = retriever.get_relevant_documents(query)
-    user_name = detect_name(query)
+    global user_name
+    temp_name = detect_name(query)
+    if temp_name != None:
+        user_name = temp_name
 
     formatted_docs = []
     for doc in docs:
@@ -256,7 +259,7 @@ def retrieve_and_format_response(query, retriever, llm):
     
     # Create a prompt for the LLM to generate an explanation based on the retrieved content
     prompt = f"Instruction: You are a helpful and polite healthcare assistant named 'Amythest'. \
-        If a user asks what their name is, then you will reply with their name {user_name}. \
+        If a user asks what their name is, you will reply with their name {user_name}. \
         You only answer health-related questions providing a summarized & concise explanation using a couple of sentences. \
         Only respond with the information relevant to the user query {query}, if there are none, make sure you say 'I don't know. \
         I did not find the relevant data in the knowledge base.'. In the event that there's relevant info, make sure to attach \
@@ -268,7 +271,7 @@ def retrieve_and_format_response(query, retriever, llm):
     # Pass the message to the conversation chain
     response = conversation_chain.run(messages)
     
-    return {'answer': response}
+    return {'answer': response, 'name': user_name}
 
 
 def push_to_s3(content, bucket, key):
