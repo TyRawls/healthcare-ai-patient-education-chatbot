@@ -10,9 +10,9 @@ import os
 import io
 import uuid
 import boto3
+import spacy
 import warnings
 import streamlit as st
-import spacy_streamlit
 from pinecone import Pinecone
 from datetime import datetime
 from urllib.parse import urlparse
@@ -320,7 +320,7 @@ def render_message(message, role):
 
 
 # Load the English NLP model
-nlp = spacy_streamlit.load("en_core_web_sm")
+nlp = spacy.load("en_core_web_sm")
 
 def detect_name(text):
     doc = nlp(text)

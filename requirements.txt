@@ -1,10 +1,10 @@
 boto3
+spacy
 pinecone
 langchain
 streamlit
 streamlit_chat
 langchain_groq
-spacy_streamlit
 langchain_openai
 langchain_voyageai
 langchain_pinecone
