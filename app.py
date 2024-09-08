@@ -319,8 +319,10 @@ def render_message(message, role):
     return message_html
 
 
-# Load the English NLP model
-nlp = spacy.load("en_core_web_sm")
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    st.error("Model 'en_core_web_sm' not found. Please install it using: python -m spacy download en_core_web_sm")
 
 def detect_name(text):
     doc = nlp(text)
