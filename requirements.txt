@@ -1,3 +1,4 @@
+re
 boto3
 pinecone
 langchain
@@ -6,4 +7,4 @@ streamlit_chat
 langchain_groq
 langchain_openai
 langchain_voyageai
-langchain_pineco
+langchain_pinecone

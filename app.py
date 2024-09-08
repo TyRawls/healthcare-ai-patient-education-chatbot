@@ -8,7 +8,7 @@ LinkedIn:      https://www.linkedin.com/in/tyrellrawls/
 
 import os
 import io
-# import re
+import re
 import uuid
 import boto3
 import warnings
