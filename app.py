@@ -320,7 +320,7 @@ def render_message(message, role):
 
 
 try:
-    nlp = spacy.load("en_core_web_sm")
+    nlp = spacy.load('en_core_web_sm')
 except OSError:
     st.error("Model 'en_core_web_sm' not found. Please install it using: python -m spacy download en_core_web_sm")
 
