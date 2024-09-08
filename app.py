@@ -239,7 +239,7 @@ def generate_presigned_url(s3_uri):
 
 
 # Function to retrieve documents, generate URLs, and format the response
-def retrieve_and_format_response(query, retriever, llm):
+def retrieve_and_format_response(query, retriever, llm, name=st.session_state.name):
     docs = retriever.get_relevant_documents(query)
 
     formatted_docs = []
@@ -255,7 +255,7 @@ def retrieve_and_format_response(query, retriever, llm):
     
     # Create a prompt for the LLM to generate an explanation based on the retrieved content
     prompt = f"Instruction: You are a helpful and polite healthcare assistant named 'Amythest'. \
-        If a user asks what their name is, you will reply with their name {st.session_state.name}. \
+        If a user asks what their name is, you will reply with their name {name}. \
         You only answer health-related questions providing a summarized & concise explanation using a couple of sentences. \
         Only respond with the information relevant to the user query {query}, if there are none, make sure you say 'I don't know. \
         I did not find the relevant data in the knowledge base.'. In the event that there's relevant info, make sure to attach \
