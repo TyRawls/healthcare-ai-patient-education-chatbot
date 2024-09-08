@@ -336,7 +336,7 @@ def detect_name(text):
 
 # Initialize session state variable for storing name
 if 'name' not in st.session_state:
-    st.session_state.name = 'human'
+    st.session_state.name = ''
 
 # Function to update the name in session state
 def save_name(user_input):
