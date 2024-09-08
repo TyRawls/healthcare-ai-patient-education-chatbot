@@ -8,9 +8,9 @@ LinkedIn:      https://www.linkedin.com/in/tyrellrawls/
 
 import os
 import io
+import re
 import uuid
 import boto3
-import spacy
 import warnings
 import streamlit as st
 from pinecone import Pinecone
@@ -319,17 +319,18 @@ def render_message(message, role):
     return message_html
 
 
-try:
-    nlp = spacy.load('en_core_web_sm')
-except OSError:
-    st.error("Model 'en_core_web_sm' not found. Please install it using: python -m spacy download en_core_web_sm")
-
 def detect_name(text):
-    doc = nlp(text)
-    # Extract named entities of type 'PERSON'
-    for ent in doc.ents:
-        if ent.label_ == "PERSON":
-            return ent.text
+    # Try to match patterns like "My name is John" or "I'm John"
+    patterns = [
+        r"my name is ([A-Z][a-z]+)",  # Pattern for "My name is X"
+        r"i am ([A-Z][a-z]+)",        # Pattern for "I am X"
+        r"i'm ([A-Z][a-z]+)"          # Pattern for "I'm X"
+    ]
+    
+    for pattern in patterns:
+        match = re.search(pattern, text, re.IGNORECASE)
+        if match:
+            return match.group(1)
     return None
 
 
