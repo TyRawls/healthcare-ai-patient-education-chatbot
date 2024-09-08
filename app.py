@@ -10,9 +10,9 @@ import os
 import io
 import uuid
 import boto3
-import spacy
 import warnings
 import streamlit as st
+import spacy_streamlit
 from pinecone import Pinecone
 from datetime import datetime
 from urllib.parse import urlparse
