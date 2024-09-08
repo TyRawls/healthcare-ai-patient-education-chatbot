@@ -320,7 +320,7 @@ def render_message(message, role):
 
 
 # Load the English NLP model
-nlp = spacy.load("en_core_web_sm")
+nlp = spacy_streamlit.load("en_core_web_sm")
 
 def detect_name(text):
     doc = nlp(text)
