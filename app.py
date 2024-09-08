@@ -267,7 +267,7 @@ def retrieve_and_format_response(query, retriever, llm):
     # Pass the message to the conversation chain
     response = conversation_chain.run(messages)
     
-    return {'answer': response, 'name': user_name}
+    return {'answer': response}
 
 
 def push_to_s3(content, bucket, key):
